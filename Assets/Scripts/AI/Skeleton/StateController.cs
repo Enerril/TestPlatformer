@@ -25,7 +25,7 @@ public class StateController : MonoBehaviour
         GameObject g = GameObject.FindGameObjectWithTag("Sight");
         
         
-        sight = sightS.GetComponent<Sight>() as Sight;
+     //   sight = sightS.GetComponent<Sight>() as Sight;
       
     }
     // Start is called before the first frame update
@@ -33,19 +33,19 @@ public class StateController : MonoBehaviour
     private void OnEnable()
     {
         Debug.Log(sight);
-        sight._SawEnemy += StartedFighting;
+     //   sight._SawEnemy += StartedFighting;
 
     }
 
     private void OnDisable()
     {
-        sight._SawEnemy -= StartedFighting;
+       // sight._SawEnemy -= StartedFighting;
         Destroyed?.Invoke();
     }
 
     private void OnDestroy()
     {
-        sight._SawEnemy -= StartedFighting;
+       // sight._SawEnemy -= StartedFighting;
         Destroyed?.Invoke();
     }
 

@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 265326368181957369}
+  - component: {fileID: 870212891}
   m_Layer: 0
   m_Name: PlayerModel
-  m_TagString: Untagged
+  m_TagString: PlayerHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &870212891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265326368181957370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c9e10756a3754418b7dd4b42b888ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHealth: 100
 --- !u!1 &2663163666337787905
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +178,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2663163666338016361}
   - component: {fileID: 6882429124738740720}
-  m_Layer: 0
+  - component: {fileID: 1265074369}
+  m_Layer: 11
   m_Name: Bip001 R Finger0
   m_TagString: Sword
   m_Icon: {fileID: 0}
@@ -194,11 +209,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2663163666337787913}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.2527023, y: 0.09319888, z: 1.6654532}
   m_Center: {x: -0.04945835, y: 0.051301513, z: 0.5745846}
+--- !u!114 &1265074369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2663163666337787913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c80c0852209be46a894302df2090a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2663163666337787915
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,11 +333,7 @@ GameObject:
   - component: {fileID: 8707878107150152733}
   - component: {fileID: 8707878107150152705}
   - component: {fileID: 8707878107150152711}
-  - component: {fileID: 8707878107150152704}
-  - component: {fileID: 8707878107150152710}
-  - component: {fileID: 8707878107150152709}
-  - component: {fileID: 8707878107150152714}
-  - component: {fileID: 318694133335048193}
+  - component: {fileID: 1632919644}
   m_Layer: 10
   m_Name: DungeonSkeleton_demo
   m_TagString: Body
@@ -361,7 +384,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2663163666337787921}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -444,66 +467,7 @@ MonoBehaviour:
   - {fileID: 2663163666338016327}
   - {fileID: 2663163666338016323}
   - {fileID: 2663163666338016321}
---- !u!114 &8707878107150152704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2663163666337787921}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68efc2c181bb5a84ab2cc8e702682172, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementDirection: {x: 0, y: 0, z: 0}
-  alien: {fileID: 2663163666337787921}
---- !u!114 &8707878107150152710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2663163666337787921}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df0e1e113a37814bb8128cb22f691b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sightS: {fileID: 0}
-  isWandering: 0
-  isFighting: 0
-  isPursuing: 0
-  isReachingGoal: 0
---- !u!114 &8707878107150152709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2663163666337787921}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4164876368ae84fb73564c346b6ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  gunEndPoint: {fileID: 0}
---- !u!114 &8707878107150152714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2663163666337787921}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 617187b131e78a145b44715f402ecdd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementDirection: {x: 0, y: 0, z: 0}
-  alien: {fileID: 265326368181957370}
---- !u!114 &318694133335048193
+--- !u!114 &1632919644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -517,6 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   padding: 0.5
+  speed: 10
 --- !u!1 &2663163666337787923
 GameObject:
   m_ObjectHideFlags: 0

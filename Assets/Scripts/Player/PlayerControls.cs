@@ -16,8 +16,8 @@ public class PlayerControls : MonoBehaviour
     float yMax;
 
 
-    public float speed = 10.0F;
-    float rotationSpeed = 50.0F;
+    public float speed = 5F;
+    float rotationSpeed = 150.0F;
 
 
  //   Coroutine animCoroutine;
