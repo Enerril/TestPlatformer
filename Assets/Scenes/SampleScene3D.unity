@@ -565,13 +565,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9a65c879fddc844a03fe184e0a28fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fe3bcbf747fd4a07b71324c4c21ae71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1632919643}
   distance: 10
   height: 5
-  lookOffset: {x: 0, y: 0, z: 1}
+  lookOffset: {x: 0, y: 1, z: 0}
 --- !u!1 &1093091223
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1632919642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa9e7f12114a6a74d9fa32c7c47d6477, type: 3}
+  m_Script: {fileID: 11500000, guid: dd35f76a6b70ada4089c66a5eea131fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
