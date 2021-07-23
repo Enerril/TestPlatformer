@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
     public float initialHealth = 100;
+    public TextMeshPro text;
     //public GameObject go;
     void Start()
     {
@@ -19,6 +22,14 @@ public class Health : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        if (text != null)
+        {
+            text.text = initialHealth.ToString();
+        }
+        
+
+
     }
 
 
